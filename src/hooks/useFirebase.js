@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
-import initializeAuthentication from '../Pages/Login/Firebase/firebase.initialize';
-import { getAuth, signInWithPopup, GoogleAuthProvider, GithubAuthProvider, onAuthStateChanged, signOut } from "firebase/auth";
+import initializeAuthentication from '../Firebase/firebase.initialize';
+import { getAuth, signInWithPopup, GoogleAuthProvider, onAuthStateChanged, signOut } from "firebase/auth";
 
 initializeAuthentication();
 function useFirebase() {
@@ -9,7 +9,6 @@ function useFirebase() {
 
     const auth = getAuth();
     const googleProvider = new GoogleAuthProvider();
-    const githubProvider = new GithubAuthProvider();
 
     const signInUsingGoogle = () => {
         signInWithPopup(auth, googleProvider)
@@ -20,15 +19,7 @@ function useFirebase() {
                 setError(err.message);
             }))
     }
-    const signInUsingGithub = () => {
-        signInWithPopup(auth, githubProvider)
-            .then((result) => {
-                setUser(result.user);
-                console.log(result.user);
-            }).catch((err => {
-                setError(err.message);
-            }))
-    }
+
 
     const logout = () => {
         signOut(auth).then(() => {
@@ -43,8 +34,6 @@ function useFirebase() {
             if (user) {
                 console.log(user);
                 setUser(user);
-            } else {
-                setUser({});
             }
         });
     }, [])
@@ -52,7 +41,6 @@ function useFirebase() {
         user,
         error,
         signInUsingGoogle,
-        signInUsingGithub,
         logout
     }
 }
