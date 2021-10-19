@@ -4,62 +4,62 @@
         "name": "Disability Insurance",
         "cost": "5,000",
         "info": "As its name suggests, disability insurance is a type of insurance product that provides income in the event that a policyholder is prevented from working and earning an income due to a disability.",
-        "img": "https://ibb.co/JB06Py8"
+        "img": "https://i.ibb.co/ZLt4CYv/1.jpg"
     },
     {
         "id": "2",
         "name": "Basic Medical Insurance",
         "cost": "1,000",
         "info": "Basic medical insurance aims at paying for your sudden hospital bill due to some short term illness. Generally the cost and payment is very low here.",
-        "img": "https: //ibb.co/gZdLpch"
+        "img": "https://i.ibb.co/B2G5xYF/2.jpg"
     },
     {
         "id": "3",
         "name": "Organisatonal Insurance",
         "cost": "50,000",
         "info": "Most businesses need General Liability insurance for Directors and Officers (D&O). If the organization has employees, workers compensation insurance, as well as other insurance offered to employees as benefits such as health, dental, and life insurance may be needed.",
-        "img": "https: //ibb.co/Xyq5pMH"
+        "img": "https://i.ibb.co/wJfQCjt/3.jpg"
     },
     {
         "id": "4",
         "name": "Family Insurance",
         "cost": "3,000",
         "info": "Family insurance protects you and your family against financial calamity when you become ill or incapacitated. Learn more about the best ways to afford health coverage that keeps you and your family safe.",
-        "img": "https: //ibb.co/HpWxYD3"
+        "img": "https://i.ibb.co/Vp7QDW5/4.jpg"
     },
     {
         "id": "5",
         "name": "Critical Insurance",
         "cost": "6,000",
         "info": "Terminal Illness Insurance (like cancer, aids etc.) pays out a capital sum if the policyholder is diagnosed with a terminal illness from which the policyholder is expected to die within 12 months of diagnosis, by a physician who specialises in that illness or condition.",
-        "img": "https: //ibb.co/tqt9DLT"
+        "img": "https://i.ibb.co/WkwLfV4/5.jpg"
     },
     {
         "id": "6",
         "name": "Student Insurance",
         "cost": "500",
         "info": "Student health plans are often purchased when family coverage is not available. According to some estimates, as many as 3 million students are covered through student health plans offered by colleges, universities, or other institutions of higher education.",
-        "img": "https: //ibb.co/B4jsT43"
+        "img": "https://i.ibb.co/vsmzLsq/6.jpg"
     },
     {
         "id": "7",
         "name": "Senior Citizen Insurance",
         "cost": "8,000",
         "info": "Student health plans are often purchased when family coverage is not available. According to some estimates, as many as 3 million students are covered through student health plans offered by colleges, universities, or other institutions of higher education.",
-        "img": "https: //ibb.co/t3XTRJC"
+        "img": "https://i.ibb.co/nRCNpLk/7.jpg"
     },
     {
         "id": "8",
         "name": "Accident Insurance",
         "cost": "10,000",
         "info": "Accident insurance is a type of insurance where the policy holder is paid directly in the event of an accident resulting in injury of the insured. The insured can spend the benefit payment however they choose. Accident insurance is complementary to, not a replacement for, health insurance.",
-        "img": "https: //ibb.co/tYPgnc6"
+        "img": "https://i.ibb.co/kq6jz0T/8.jpg"
     },
     {
         "id": "9",
         "name": "Maternity Insurance",
         "cost": "1,500",
         "info": "What all is Covered Under Maternity Insurance Plan? 30 days pre-hospitalization and 60 days post-hospitalization expenses. Normal and C- section delivery expenses. Hospitalization expenses related to nursing, room rent, OT charge, anesthetist fees, and doctor's fees",
-        "img": "https: //ibb.co/72SzDcP"
+        "img": "https://i.ibb.co/MMghHTr/9.jpg"
     }
 ]

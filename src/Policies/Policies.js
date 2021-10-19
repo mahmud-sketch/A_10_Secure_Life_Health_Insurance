@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import Policy from './Policy';
 
 
 const Policies = () => {
@@ -6,18 +7,18 @@ const Policies = () => {
     useEffect(() => {
         fetch('./insurances.json')
             .then(res => res.json())
-            .then(data => setPolicies(data));
+            .then(data => { setPolicies(data); console.log(data); });
     }, [])
 
     return (
         <div id=''>
-            <h2 className="text-primary mt-5">Our services</h2>
-            <div className="service-container">
+            <h2 className="">Our Policies</h2>
+            <div className="">
                 {
-                    services.map(service => <Service
-                        key={service.id}
-                        service={service}
-                    ></Service>)
+                    policies.map(policy => <Policy
+                        key={policy.id}
+                        policy={policy}
+                    ></Policy>)
                 }
             </div>
         </div>

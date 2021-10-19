@@ -29,7 +29,7 @@ function App() {
             <Route path='/policies'>
               <Policies></Policies>
             </Route>
-            <PrivateRoute path='/details'>
+            <PrivateRoute path='/details/:id'>
               <PolicyDetails></PolicyDetails>
             </PrivateRoute>
             <Route path='/subscribe'>

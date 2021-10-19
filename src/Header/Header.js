@@ -2,7 +2,6 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 import './Header.css';
 import useAuth from '../hooks/useAuth'
-import useFirebase from '../hooks/useFirebase';
 
 function Header() {
     const { user, logout } = useAuth();
@@ -10,7 +9,7 @@ function Header() {
         <div className="header">
             <Link to='/home'>Home</Link>
             <Link to='/policies'>insurance</Link>
-            <Link to='/details'>details</Link>
+
             <Link to='/subscribe'>subscribe</Link>
             <Link to='/claim'>claim</Link>
             <Link to='/registration'>registration</Link>
