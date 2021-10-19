@@ -25,8 +25,8 @@ function Registration() {
 
     const handleRegistration = e => {
         e.preventDefault();
-        registerUsingMailandPassword(email, password);
-        setUserName(name);
+        registerUsingMailandPassword(name, email, password);
+        // setUserName(name);
     }
     return (
         <div>

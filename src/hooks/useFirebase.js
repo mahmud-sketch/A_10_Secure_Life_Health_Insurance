@@ -22,13 +22,14 @@ function useFirebase() {
             }))
     }
 
-    const registerUsingMailandPassword = (email, password) => {
+
+    const registerUsingMailandPassword = (name, email, password) => {
 
         createUserWithEmailAndPassword(auth, email, password)
             .then((result) => {
                 setUser(result.user);
                 console.log(result.user);
-                setUserName();
+                setUserName(name);
             }).catch((err => {
                 setError(err.message);
             }))
