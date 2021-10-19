@@ -32,12 +32,12 @@ function App() {
             <PrivateRoute path='/details/:id'>
               <PolicyDetails></PolicyDetails>
             </PrivateRoute>
-            <Route path='/subscribe'>
+            <PrivateRoute path='/subscribe'>
               <Subscribe></Subscribe>
-            </Route>
-            <Route path='/claim'>
+            </PrivateRoute>
+            <PrivateRoute path='/claim'>
               <Claims></Claims>
-            </Route>
+            </PrivateRoute>
             <Route path='/login'>
               <Login></Login>
             </Route>

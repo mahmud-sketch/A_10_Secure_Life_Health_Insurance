@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Policy from './Policy';
+import './policies.css'
 
 
 const Policies = () => {
@@ -11,9 +12,9 @@ const Policies = () => {
     }, [])
 
     return (
-        <div id=''>
-            <h2 className="">Our Policies</h2>
-            <div className="">
+        <div>
+            <h1 className="center">Our Policies</h1>
+            <div className="grid">
                 {
                     policies.map(policy => <Policy
                         key={policy.id}
