@@ -38,12 +38,15 @@ function Header() {
                                     <Link to='/subscribe' className="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium" aria-current="page">subscribe</Link>
                                     <Link to='/claim' className="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium" aria-current="page">claim</Link>
                                     <Link to='/registration' className="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium" aria-current="page">registration</Link>
-                                    <span className="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium" aria-current="page">{user.displayName} </span>
+
                                     {
                                         user.email ? <button onClick={logout} className="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium" aria-current="page">log out</button> :
                                             <Link to='/login' className="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium" aria-current="page">login</Link>
                                     }
+                                    {
+                                        user.email ? <span className="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium" aria-current="page">welcome {user.displayName} </span> : <span className="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium" aria-current="page">username</span>
 
+                                    }
 
 
                                 </div>
@@ -74,11 +77,11 @@ function Header() {
                         <Link to='/subscribe' className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">subscribe</Link>
                         <Link to='/claim' className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">claim</Link>
                         <Link to='/registration' className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">registration</Link>
-                        <span className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">{user.displayName} </span>
                         {
                             user.email ? <button onClick={logout} className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">log out</button> :
                                 <Link to='/login' className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">login</Link>
                         }
+                        <span className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">{user.displayName} </span>
 
 
                     </div>

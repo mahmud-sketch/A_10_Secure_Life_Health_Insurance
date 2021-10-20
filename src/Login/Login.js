@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useHistory } from 'react-router-dom';
 import useAuth from '../hooks/useAuth';
 
 function Login() {
@@ -7,8 +7,29 @@ function Login() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
-    const { signInUsingGoogle, processLogin, } = useAuth();
+    const { signInUsingGoogle, processLogin, setIsLoading } = useAuth();
     // console.log(useAuth());
+
+    const location = useLocation();
+    const history = useHistory();
+
+    const redirect_uri = location.state?.from || '/home';
+
+
+    const handleGoogleLogin = () => {
+        setIsLoading(true);
+        signInUsingGoogle()
+            .then((result) => {
+                // console.log(result);
+                history.push(redirect_uri);
+                // setUser(result.user);
+                console.log(result.user);
+            }).catch((err => {
+                // setError(err.message);
+            })).finally(() => { setIsLoading(false) })
+
+
+    }
 
     const handleMailChange = e => {
         setEmail(e.target.value);
@@ -37,7 +58,7 @@ function Login() {
             </form>
 
             <br /><br />
-            <button onClick={signInUsingGoogle} className="bg-purple-500 text-white active:bg-purple-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+            <button onClick={handleGoogleLogin} className="bg-purple-500 text-white active:bg-purple-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                 type="button">Google Sign In</button>
             <br />
 

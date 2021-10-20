@@ -7,19 +7,27 @@ function useFirebase() {
     const [user, setUser] = useState({});
     const [error, setError] = useState({});
     const [errMessage, setErrMessage] = useState('');
+    //r
+    const [isLoading, setIsLoading] = useState(true);
+
 
 
     const auth = getAuth();
     const googleProvider = new GoogleAuthProvider();
 
+    // const signInUsingGoogle = () => {
+    //     signInWithPopup(auth, googleProvider)
+    //         .then((result) => {
+    //             setUser(result.user);
+    //             console.log(result.user);
+    //         }).catch((err => {
+    //             setError(err.message);
+    //         }))
+    // }
     const signInUsingGoogle = () => {
-        signInWithPopup(auth, googleProvider)
-            .then((result) => {
-                setUser(result.user);
-                console.log(result.user);
-            }).catch((err => {
-                setError(err.message);
-            }))
+        setIsLoading(true);
+        return signInWithPopup(auth, googleProvider);
+
     }
 
 
@@ -55,20 +63,25 @@ function useFirebase() {
     }
 
     const logout = () => {
+        setIsLoading(true);
         signOut(auth).then(() => {
             setUser({});
         }).catch((error) => {
             // An error happened.
-        });
+        }).finally(() => setIsLoading(false));
     }
 
     useEffect(() => {
-        onAuthStateChanged(auth, (user) => {
+        const unsubscribed = onAuthStateChanged(auth, user => {
             if (user) {
                 console.log(user);
                 setUser(user);
+            } else {
+                setUser({});
             }
+            setIsLoading(false);
         });
+        return () => unsubscribed;
     }, [])
     return {
         user,
@@ -77,7 +90,9 @@ function useFirebase() {
         registerUsingMailandPassword,
         logout,
         processLogin,
-        setUserName
+        setUserName,
+        setIsLoading,
+        isLoading
     }
 }
 
