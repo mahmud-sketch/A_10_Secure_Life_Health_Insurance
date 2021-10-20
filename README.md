@@ -3,7 +3,7 @@
 Description:
  People get sick which costs them money. Sickness is an unexpected sudden things for which people may not be prepared. In that case Secure Life Health Insurance Company helps them come out from this problem by bearing their medical expenses if they are health insured.
 
- ### Livesite: <https://life-e9957.web.app/>
+ ### Livesite: <https://life-e9957.firebaseapp.com/>
 
  #### five points about the site->
 
