@@ -13,7 +13,7 @@ const Policies = () => {
 
     return (
         <div>
-            <h1 className="center">Our Policies</h1>
+            <h1 className="center">Our Healthcare Policies</h1>
             <div className="grid">
                 {
                     policies.map(policy => <Policy

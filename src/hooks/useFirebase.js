@@ -5,41 +5,27 @@ import { getAuth, signInWithPopup, GoogleAuthProvider, onAuthStateChanged, signO
 initializeAuthentication();
 function useFirebase() {
     const [user, setUser] = useState({});
-    const [error, setError] = useState({});
+    // const [error, setError] = useState({});
     const [errMessage, setErrMessage] = useState('');
-    //r
     const [isLoading, setIsLoading] = useState(true);
-
-
 
     const auth = getAuth();
     const googleProvider = new GoogleAuthProvider();
 
-    // const signInUsingGoogle = () => {
-    //     signInWithPopup(auth, googleProvider)
-    //         .then((result) => {
-    //             setUser(result.user);
-    //             console.log(result.user);
-    //         }).catch((err => {
-    //             setError(err.message);
-    //         }))
-    // }
     const signInUsingGoogle = () => {
         setIsLoading(true);
         return signInWithPopup(auth, googleProvider);
-
     }
 
-
     const registerUsingMailandPassword = (name, email, password) => {
-
         createUserWithEmailAndPassword(auth, email, password)
             .then((result) => {
                 setUser(result.user);
                 console.log(result.user);
                 setUserName(name);
+                setErrMessage('Congratulations!!! Registraton successful. please reload page to show name beside welcome');
             }).catch((err => {
-                setError(err.message);
+                setErrMessage(err.message);
             }))
     }
 
@@ -85,14 +71,16 @@ function useFirebase() {
     }, [])
     return {
         user,
-        error,
+        // error,
         signInUsingGoogle,
         registerUsingMailandPassword,
         logout,
         processLogin,
         setUserName,
         setIsLoading,
-        isLoading
+        isLoading,
+        errMessage,
+        setErrMessage
     }
 }
 

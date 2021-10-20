@@ -33,10 +33,10 @@ function Header() {
 
 
                                     <Link to='/home' className="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium" aria-current="page">Home</Link>
-                                    <Link to='/policies' className="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium" aria-current="page">insurance</Link>
+                                    <Link to='/policies' className="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium" aria-current="page">health insurance</Link>
 
-                                    <Link to='/subscribe' className="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium" aria-current="page">subscribe</Link>
-                                    <Link to='/claim' className="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium" aria-current="page">claim</Link>
+                                    <Link to='/subscribe' className="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium" aria-current="page">subscribe policy</Link>
+                                    <Link to='/claim' className="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium" aria-current="page">claim money</Link>
                                     <Link to='/registration' className="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium" aria-current="page">registration</Link>
 
                                     {
@@ -72,10 +72,10 @@ function Header() {
                 <div className="sm:hidden" id="mobile-menu">
                     <div className="px-2 pt-2 pb-3 space-y-1">
                         <Link to='/home' className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Home</Link>
-                        <Link to='/policies' className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">insurance</Link>
+                        <Link to='/policies' className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">health insurance</Link>
 
-                        <Link to='/subscribe' className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">subscribe</Link>
-                        <Link to='/claim' className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">claim</Link>
+                        <Link to='/subscribe' className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">subscribe policy</Link>
+                        <Link to='/claim' className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">claim money</Link>
                         <Link to='/registration' className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">registration</Link>
                         {
                             user.email ? <button onClick={logout} className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">log out</button> :
